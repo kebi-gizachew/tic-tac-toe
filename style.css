@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Irish+Grover&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+body{
+    background:linear-gradient(180deg,#240006,#8A0017);
+    font-size:16px;
+    overflow:hidden;
+    width:100vw;
+    height:100vh;
+    font-family:'Irish Grover',cursive;
+}
+header{
+    width:100vw;
+    height:200px;
+    margin:0;
+    margin-bottom:80px;
+    position:relative;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+header div{
+    position:absolute;
+    top:-78px;
+    left:350px;
+    z-index:0;
+    width:319px;
+    height:264px;
+    background:linear-gradient(180deg,#FE3455,#981F33);
+    border-radius:50%;
+}
+header h1{
+    margin:auto;
+    color:#FF5882;
+    font-size: 200px;
+    z-index:1;
+    --webkit-text-stroke: 2px #fad2d9;
+}
+main{
+    width:100vw;
+    height:60vh;
+    margin:0;
+    display:flex;
+    justify-content:center;
+}
+section{
+    width:734px;
+    height:545px;
+    border-radius:20px;
+    background:#330008;
+    box-shadow: 4px 8px 20px 0px #FFCFD7;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    grid-template-rows:repeat(3,1fr);
+    row-gap:10px;
+    column-gap:10px;
+    padding:27px;
+}
+main div{
+    width:220px;
+    height:160px;
+    border-radius:15px;
+    opacity:50%;
+}
+.one{
+    background:linear-gradient(180deg,#FF5882,#FF3455);
+}
+.two{
+    background:linear-gradient(180deg,#FE3455,#FF5882);
+}
+.one:hover{
+    opacity:100%;
+    cursor:pointer;
+}
+.two:hover{
+    opacity:100%;
+    cursor:pointer;
+}
+footer{
+    width:100vw;
+    height:100px;
+    margin:0;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:25px;
+    color:#FF5882;
+    opacity:70%;
+    --webkit-text-stroke: 1px #FF3455;
+}
+    
