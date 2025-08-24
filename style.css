@@ -7,8 +7,8 @@
 }
 body{
     background:linear-gradient(180deg,#240006,#8A0017);
-    font-size:16px;
     overflow:hidden;
+    font-size:16px;
     width:100vw;
     height:100vh;
     font-family:'Irish Grover',cursive;
@@ -17,7 +17,7 @@ header{
     width:100vw;
     height:200px;
     margin:0;
-    margin-bottom:80px;
+    margin-bottom:60px;
     position:relative;
     display:flex;
     justify-content:center;
@@ -82,7 +82,7 @@ main div{
 }
 footer{
     width:100vw;
-    height:100px;
+    height:180px;
     margin:0;
     display:flex;
     justify-content:center;
@@ -91,5 +91,121 @@ footer{
     color:#FF5882;
     opacity:70%;
     --webkit-text-stroke: 1px #FF3455;
+}
+#reset{
+    width:500px;
+    margin:auto;
+    height:300px;
+    font-size:40px;
+    color:#fad2d9;
+    overflow:hidden;
+}
+#reset button{
+    width:170px;
+    color:#fad2d9;
+    height:80px;
+    margin-top:60px;
+    border-radius:20px;
+    background:linear-gradient(180deg,transparent,#FF3455);
+border:none;
+font-size:40px;
+font-family:'Irish Grover', cursive
+}
+#reset button:hover{
+    background:#fad2d9;
+    color:#330008;
+}
+#choice{
+    margin:auto;
+    height:300px;
+    font-size:30px;
+    color:#fad2d9;
+    overflow:hidden;
+    
+}
+#choice button{
+    font-family:'Irish Grover', cursive;
+    width:200px;
+    height:80px;
+    font-size:30px;
+    border-radius:20px;
+    background:linear-gradient(180deg,transparent,#FF3455);
+    border:none;
+    margin-top:80px;
+    color:#fad2d9;
+}
+#choice button:hover{
+    background:#fad2d9;
+    color:#330008;
+}
+#enter{
+    margin:auto;
+    width:30vw;
+    height:30vh;
+    border-radius:10px;
+    font-size:40px;
+    background:linear-gradient(180deg,#FF5882,#FF3455);
+    color:#fad2d9;
+    display:flex;
+    justify-content:column;
+    overflow:hidden;
+    border:none;
+    cursor:pointer;
+    padding:10px;
+    text-align:center;
+}
+#enter input{
+    font-size:30px;
+    background:#fad2d9;
+    border:none;
+    width:90%;
+    height:50px;
+    border-radius:10px;
+    font-size:30px;
+    text-align:center;
+    border:none;
+    margin-top:20px;
+    margin:20px 20px 10px 70px;
+}
+#enter input:focus{
+    outline:none;
+}
+#enter button{
+    width:160px;
+    height:60px;
+    border-radius:10px;
+    font-size:25px;
+    background:linear-gradient(180deg,#330008,#8A0017);
+    color:#fad2d9;
+    border:none;
+    cursor:pointer;
+    margin-top:20px;
+    margin-left:100px;
+}
+#enter button:hover{
+    background:#FE3455;
+}
+#xoro{
+    margin:auto;
+    height:240px;
+    font-size:45px;
+    color:#fad2d9;
+    overflow:hidden;
+}
+#xoro button{
+    width:170px;
+    color:#fad2d9;
+    height:80px;
+    margin-top:40px;
+    border-radius:20px;
+    background:linear-gradient(180deg,transparent,#FF3455);
+    border:none;
+    font-size:50px;
+    font-family:'Irish Grover', cursive;
+    margin-left:10px;
+}
+#xoro button:hover{
+    background:#fad2d9;
+    color:#330008;
 }
     

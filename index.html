@@ -12,7 +12,7 @@
         <h1>Tic Tac Toe</h1>
     </header>
     <main>
-        <section>
+        <section id="board">
             <div class="one"></div>
             <div class="two"></div>
             <div class="one"></div>
@@ -22,12 +22,42 @@
             <div class="one"></div>
             <div class="two"></div>
             <div class="one"></div>
-
         </section>
     </main>
     <footer>
         <h2>Developed by Kebron.</h2>
-    </footer> 
+    </footer>
+    <dialog id="choice">
+        <section>
+            <h2>Choose who you want to play with.</h2>
+            <button id="computer">Computer</button>
+            <button id="other">Friend</button>
+        </section>
+    </dialog> 
+    <dialog id="enter">
+        <section>
+            <h2>Enter your names.</h2>
+            <form>
+                <input type="text" id="player1" placeholder="Player 1" required/>
+                <input type="text" id="player2" placeholder="Player 2" required/>
+                <button id="start">Start Game</button>
+            </form>
+        </section>
+    </dialog>
+   
+    <dialog id="reset">
+        <section>
+            <h2>Let's Play Again.</h2>
+            <button id="sure">Sure</button>
+        </section>
+    </dialog>
+    <dialog id="xoro">
+        <section>
+        <h2>Pick 'X' or 'O'.</h2>
+        <button id="x">X</button>
+        <button id="o">Y</button>
+        </section>
+    </dialog>
     <script src="script.js"></script>   
 </body>
 </html>
