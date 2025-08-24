@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Tic-Tac-Toe</title>
     <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
@@ -12,16 +12,17 @@
         <h1>Tic Tac Toe</h1>
     </header>
     <main>
+        <div id="status">Welcome to Tic-Tac-Toe!</div>
         <section id="board">
-            <div class="one"></div>
-            <div class="two"></div>
-            <div class="one"></div>
-            <div class="two"></div>
-            <div class="one"></div>
-            <div class="two"></div>
-            <div class="one"></div>
-            <div class="two"></div>
-            <div class="one"></div>
+            <div class="one" data-index="0"></div>
+            <div class="two" data-index="1"></div>
+            <div class="one" data-index="2"></div>
+            <div class="two" data-index="3"></div>
+            <div class="one" data-index="4"></div>
+            <div class="two" data-index="5"></div>
+            <div class="one" data-index="6"></div>
+            <div class="two" data-index="7"></div>
+            <div class="one" data-index="8"></div>
         </section>
     </main>
     <footer>
@@ -37,7 +38,7 @@
     <dialog id="enter">
         <section>
             <h2>Enter your names.</h2>
-            <form>
+            <form id="player-form">
                 <input type="text" id="player1" placeholder="Player 1" required/>
                 <input type="text" id="player2" placeholder="Player 2" required/>
                 <button id="start">Start Game</button>
@@ -47,7 +48,7 @@
    
     <dialog id="reset">
         <section>
-            <h2>Let's Play Again.</h2>
+            <h2 id="result-message">Let's Play Again.</h2>
             <button id="sure">Sure</button>
         </section>
     </dialog>
@@ -55,7 +56,7 @@
         <section>
         <h2>Pick 'X' or 'O'.</h2>
         <button id="x">X</button>
-        <button id="o">Y</button>
+        <button id="o">O</button>
         </section>
     </dialog>
     <script src="script.js"></script>   

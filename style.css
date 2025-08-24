@@ -12,6 +12,7 @@ body{
     width:100vw;
     height:100vh;
     font-family:'Irish Grover',cursive;
+    
 }
 header{
     width:100vw;
@@ -65,6 +66,10 @@ main div{
     height:160px;
     border-radius:15px;
     opacity:50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
 }
 .one{
     background:linear-gradient(180deg,#FF5882,#FF3455);
@@ -207,5 +212,32 @@ font-family:'Irish Grover', cursive
 #xoro button:hover{
     background:#fad2d9;
     color:#330008;
+}
+.x{
+    font-size:160px;
+}
+.o{
+    font-size:180px;
+}
+@keyframes placeMarker {
+    0% { transform: scale(0); opacity: 0; }
+    70% { transform: scale(1.1); }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+.x, .o {
+    animation: placeMarker 0.3s ease-out forwards;
+}
+/* Status message styling */
+#status {
+    position: absolute;
+    top: 800px;
+    width: 100%;
+    text-align: center;
+    font-size: 30px;
+    color: #fad2d9;
+    text-shadow: 2px 2px 0px #330008;
+    z-index: 10;
+    
 }
     
