@@ -240,4 +240,134 @@ font-family:'Irish Grover', cursive
     z-index: 10;
     
 }
+@media screen and (max-width:700px){
+    body{
+        height:500px;
+        overflow:hidden;
+
+    }
+    header h1{
+        font-size:80px;
+        text-align:center;
+    }
+    #choice{
+        width:95vw;
+        height:110px;
+        font-size:14px;
+        margin-left:10px;
+        display:flex;
+        justify-content:space-evenly;
+       
+    }
+    #choice section{
+        width:100%;
+        height:100%;
+        padding:10px;
+    }
+    #choice button{
+        width:70px;
+        height:50px;
+        margin:auto;
+        font-size:13px;
+        padding:0;
+    }
+    main #board div{
+        width:120px;
+    }
+    main #board{
+        width:100vw;
+        margin:auto;
+        padding:10px;
+    }
+    footer{
+        margin-top:200px;
+        overflow:hidden;
+    }
+    #xoro{
+        width:95vw;
+        height:120px;
+        font-size:14px;
+        margin-left:10px;
+        display:flex;
+        justify-content:space-evenly;
+
+    }
+    #xoro button{
+        width:80px;
+        height:50px;
+        margin:auto;
+        font-size:19px;
+        padding:0;
+
+    }
+    #xoro section{
+        width:100%;
+        height:100%;
+        padding:10px;
+
+    }
+    #reset{
+        width:80vw;
+        text-align:center;
+        height:90px;
+        font-size:20px;
+        margin-left:10px;
+        display:flex;
+        justify-content:space-evenly;
+    }
+    #reset button{
+        width:80px;
+        height:50px;
+        margin:auto;
+        margin-left:50px;
+        font-size:19px;
+        padding:0;
+        margin-right:-100px;
+
+
+    }
+    #reset section{
+        width:100%;
+        height:100%;
+        padding:10px;
+
+    }
+    #enter{
+        padding:0;
+        width:95vw;
+        text-align:center;
+        height:300px;
+        font-size:15px;
+        margin-left:10px;
+        display:flex;
+        justify-content:space-evenly; 
+    }
+    #enter input{
+        width:200px;
+        height:50px;
+        margin:auto;
+        font-size:14px;
+        padding:0;
+    }
+    #enter section{
+        display:flex;
+        flex-direction:column;
+        width:100%;
+    }
+    #enter form{
+        display:flex;
+        flex-direction:column;
+        width:100%;
+        height:200px;
+    }
+    #enter button{
+        margin:auto;
+        height:40px;
+        width:100px;
+        font-size:15px;
+    }
+   
+   
+
+}
     
