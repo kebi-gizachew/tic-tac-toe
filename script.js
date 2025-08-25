@@ -184,6 +184,7 @@ function updateStatus() {
     status.textContent = `${playerNames[currentPlayer]}'s turn (${currentPlayer})`;
   }
 }
+    
 
 function renderBoard() {
   const cells = document.querySelectorAll('#board > div');
@@ -220,7 +221,6 @@ function safeClose(dialog) {
 startbtn.addEventListener("click",()=>{
     enterDialog.close();
 })
-// Replace your existing form submission code with this
 document.addEventListener('DOMContentLoaded', initGame);
 
         
