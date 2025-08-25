@@ -5,8 +5,6 @@ let playerNames = { X: '', O: '' };
 let vsComputer = false;
 let playerSymbol = 'X';
 let winningCells = [];
-
-
 const board = document.getElementById('board');
 const status = document.getElementById('status');
 const choiceDialog = document.getElementById('choice');
@@ -16,26 +14,21 @@ const xoroDialog = document.getElementById('xoro');
 const playerForm = document.getElementById('player-form');
 const resultMessage = document.getElementById('result-message');
 const startbtn=document.getElementById('start')
-
-
 // Win combinations
 const winPatterns = [
   [0, 1, 2], [3, 4, 5], [6, 7, 8], 
   [0, 3, 6], [1, 4, 7], [2, 5, 8], 
   [0, 4, 8], [2, 4, 6]            
 ];
-
-
 function initGame() {
   choiceDialog.showModal();
-
   document.getElementById('computer').addEventListener('click', () => {
     vsComputer = true;
     safeClose(choiceDialog);
     xoroDialog.showModal();
   });
 
-  document.getElementById('other').addEventListener('click', () => {
+ document.getElementById('other').addEventListener('click', () => {
     vsComputer = false;
     safeClose(choiceDialog);
     enterDialog.showModal();
@@ -59,7 +52,7 @@ function initGame() {
     resetGame();
   });
 
-  // Add listeners to board cells once
+  // Add listeners to board cells
   const cells = document.querySelectorAll('#board > div');
   cells.forEach(cell => {
     const index = parseInt(cell.getAttribute('data-index'));
@@ -76,7 +69,6 @@ function selectSymbol(symbol) {
     : { X: "Computer", O: "You" };
   startGame();
 }
-
 function startGame() {
   gameActive = true;
   gameBoard = Array(9).fill('');
@@ -84,23 +76,18 @@ function startGame() {
   winningCells = [];
   renderBoard();
   updateStatus();
-
   if (vsComputer && currentPlayer !== playerSymbol) {
     setTimeout(computerMove, 500);
   }
 }
-
 function handleCellClick(index) {
   if (gameBoard[index] || !gameActive) return;
   if (vsComputer && currentPlayer !== playerSymbol) return;
-
   makeMove(index);
 }
-
 function makeMove(index) {
   gameBoard[index] = currentPlayer;
   renderBoard();
-
   if (checkWinner()) {
     highlightWinningCells();
     endGame(`${playerNames[currentPlayer]} wins!`);
@@ -115,7 +102,6 @@ function makeMove(index) {
     }
   }
 }
-
 function computerMove() {
   if (!gameActive) return;
 
@@ -127,7 +113,6 @@ function computerMove() {
 
   if (move !== null) makeMove(move);
 }
-
 function findWinningMove(player) {
   for (const [a, b, c] of winPatterns) {
     const line = [gameBoard[a], gameBoard[b], gameBoard[c]];
@@ -137,12 +122,10 @@ function findWinningMove(player) {
   }
   return null;
 }
-
 function findBlockingMove() {
   const opponent = currentPlayer === 'X' ? 'O' : 'X';
   return findWinningMove(opponent);
 }
-
 function takeCenter() {
   return gameBoard[4] === '' ? 4 : null;
 }
@@ -200,7 +183,6 @@ function highlightWinningCells() {
     cell.classList.add('winning-cell');
   });
 }
-
 function endGame(message) {
   gameActive = false;
   resultMessage.textContent = message;
