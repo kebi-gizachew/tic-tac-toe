@@ -6,7 +6,6 @@ let vsComputer = false;
 let playerSymbol = 'X';
 let winningCells = [];
 
-// DOM elements
 const board = document.getElementById('board');
 const status = document.getElementById('status');
 const choiceDialog = document.getElementById('choice');
@@ -19,16 +18,14 @@ const startbtn=document.getElementById('start')
 
 // Winning combinations
 const winPatterns = [
-  [0, 1, 2], [3, 4, 5], [6, 7, 8], // rows
-  [0, 3, 6], [1, 4, 7], [2, 5, 8], // columns
-  [0, 4, 8], [2, 4, 6]             // diagonals
+  [0, 1, 2], [3, 4, 5], [6, 7, 8], 
+  [0, 3, 6], [1, 4, 7], [2, 5, 8], 
+  [0, 4, 8], [2, 4, 6]            
 ];
 
-// ============= INIT =============
 function initGame() {
   choiceDialog.showModal();
 
-  // Choice dialog listeners
   document.getElementById('computer').addEventListener('click', () => {
     vsComputer = true;
     safeClose(choiceDialog);
@@ -55,6 +52,7 @@ function initGame() {
   });
 
   // Reset button
+
   document.getElementById('sure').addEventListener('click', () => {
     safeClose(resetDialog);
     resetGame();
@@ -78,7 +76,6 @@ function selectSymbol(symbol) {
   startGame();
 }
 
-// ============= GAME LOGIC =============
 function startGame() {
   gameActive = true;
   gameBoard = Array(9).fill('');
@@ -119,7 +116,6 @@ function makeMove(index) {
   }
 }
 
-// ============= COMPUTER AI =============
 function computerMove() {
   if (!gameActive) return;
 
@@ -161,7 +157,6 @@ function takeRandom() {
   return available.length ? available[Math.floor(Math.random() * available.length)] : null;
 }
 
-// ============= HELPERS =============
 function checkWinner() {
   for (const pattern of winPatterns) {
     const [a, b, c] = pattern;
@@ -223,7 +218,6 @@ startbtn.addEventListener("click",()=>{
     enterDialog.close();
 })
 // Replace your existing form submission code with this
-// ============= START APP =============
 document.addEventListener('DOMContentLoaded', initGame);
 
         
