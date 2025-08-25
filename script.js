@@ -18,7 +18,7 @@ const resultMessage = document.getElementById('result-message');
 const startbtn=document.getElementById('start')
 
 
-// Winning combinations
+// Win combinations
 const winPatterns = [
   [0, 1, 2], [3, 4, 5], [6, 7, 8], 
   [0, 3, 6], [1, 4, 7], [2, 5, 8], 
@@ -41,11 +41,10 @@ function initGame() {
     enterDialog.showModal();
   });
 
-  // X or O selection
+  // X or O selecting
   document.getElementById('x').addEventListener('click', () => selectSymbol('X'));
   document.getElementById('o').addEventListener('click', () => selectSymbol('O'));
 
-  // Player form
   playerForm.addEventListener('submit', (e) => {
     e.preventDefault();
     playerNames.X = document.getElementById('player1').value || 'Player 1';
@@ -54,7 +53,6 @@ function initGame() {
     startGame();
   });
 
-  // Reset button
 
   document.getElementById('sure').addEventListener('click', () => {
     safeClose(resetDialog);
@@ -69,7 +67,7 @@ function initGame() {
   });
 }
 
-// Handle player/computer symbol choice
+// Adjusting player/computer symbol choice
 function selectSymbol(symbol) {
   playerSymbol = symbol;
   safeClose(xoroDialog);
@@ -87,7 +85,6 @@ function startGame() {
   renderBoard();
   updateStatus();
 
-  // If computer starts
   if (vsComputer && currentPlayer !== playerSymbol) {
     setTimeout(computerMove, 500);
   }
@@ -168,7 +165,7 @@ function checkWinner() {
       return true;
     }
   }
-  
+
   return false;
 }
 
@@ -215,7 +212,7 @@ function resetGame() {
   startGame();
 }
 
-// Safely close a dialog (avoid errors if not open)
+// Safely close a dialog 
 function safeClose(dialog) {
   if (dialog.open) dialog.close();
 }
