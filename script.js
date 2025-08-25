@@ -6,6 +6,7 @@ let vsComputer = false;
 let playerSymbol = 'X';
 let winningCells = [];
 
+
 const board = document.getElementById('board');
 const status = document.getElementById('status');
 const choiceDialog = document.getElementById('choice');
@@ -16,12 +17,14 @@ const playerForm = document.getElementById('player-form');
 const resultMessage = document.getElementById('result-message');
 const startbtn=document.getElementById('start')
 
+
 // Winning combinations
 const winPatterns = [
   [0, 1, 2], [3, 4, 5], [6, 7, 8], 
   [0, 3, 6], [1, 4, 7], [2, 5, 8], 
   [0, 4, 8], [2, 4, 6]            
 ];
+
 
 function initGame() {
   choiceDialog.showModal();
